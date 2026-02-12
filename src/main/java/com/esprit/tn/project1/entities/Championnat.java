@@ -1,9 +1,14 @@
 package com.esprit.tn.project1.entities;
+
 import jakarta.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
+@Entity
+@Table(name = "championnat")
+public class Championnat implements Serializable {
 
-public class Championnat {
+        private static final long serialVersionUID = 1L;
 
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,7 +26,5 @@ public class Championnat {
         @OneToOne(mappedBy = "championnat", cascade = CascadeType.ALL)
         private DetailChampionnat detailChampionnat;
 
-        // getters & setters
-    }
 
-
+}

@@ -1,6 +1,12 @@
 package com.esprit.tn.project1.entities;
+
 import jakarta.persistence.*;
-public class Contrat {
+import java.io.Serializable;
+
+@Entity
+@Table(name = "contrat")
+public class Contrat implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idContrat;
@@ -15,5 +21,5 @@ public class Contrat {
     @ManyToOne
     private Equipe equipe;
 
-    // getters & setters
+
 }

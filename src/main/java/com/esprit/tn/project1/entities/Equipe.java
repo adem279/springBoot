@@ -1,9 +1,14 @@
 package com.esprit.tn.project1.entities;
 
 import jakarta.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
-public class Equipe {
+@Entity
+@Table(name = "equipe")
+public class Equipe implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,6 +24,4 @@ public class Equipe {
     @OneToMany(mappedBy = "equipe")
     private List<Contrat> contrats;
 
-    // getters & setters
 }
-

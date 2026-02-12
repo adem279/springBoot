@@ -1,7 +1,15 @@
 package com.esprit.tn.project1.entities;
+
 import jakarta.persistence.*;
+import java.io.Serializable;
 import java.util.List;
-public class Sponsor {
+
+@Entity
+@Table(name = "sponsor")
+public class Sponsor implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idSponsor;
@@ -14,5 +22,5 @@ public class Sponsor {
     @OneToMany(mappedBy = "sponsor")
     private List<Contrat> contrats;
 
-    // getters & setters
+
 }

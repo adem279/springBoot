@@ -1,6 +1,14 @@
 package com.esprit.tn.project1.entities;
+
 import jakarta.persistence.*;
-public class DetailChampionnat {
+import java.io.Serializable;
+
+@Entity
+@Table(name = "detail_championnat")
+public class DetailChampionnat implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     @Id
     private String code;
 
@@ -10,7 +18,5 @@ public class DetailChampionnat {
     @JoinColumn(name = "id_championnat")
     private Championnat championnat;
 
-    // getters & setters
+
 }
-
-
