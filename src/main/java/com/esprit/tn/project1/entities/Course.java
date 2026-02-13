@@ -18,7 +18,6 @@ public class Course implements Serializable {
     private String emplacement;
 
     private LocalDate dateCourse;
-
     @ManyToOne
     private Championnat championnat;
 
