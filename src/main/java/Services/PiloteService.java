@@ -2,7 +2,11 @@ package Services;
 
 import Repository.PiloteRepository;
 import com.esprit.tn.project1.entities.Pilote;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 
+@Service
+@AllArgsConstructor
 public class PiloteService implements IPiloteService{
     PiloteRepository pr;
 

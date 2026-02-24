@@ -2,9 +2,12 @@ package Services;
 
 import Repository.SponsorRepository;
 import com.esprit.tn.project1.entities.Sponsor;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
+@AllArgsConstructor
 public class SponsorService implements ISponsorService{
     SponsorRepository sp;
     @Override
