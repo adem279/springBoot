@@ -27,11 +27,12 @@ public class Pilote implements Serializable {
     private Integer nbPointsTotal;
     private Integer classementGeneral;
 
+    @Enumerated(EnumType.STRING)
+    private Categorie categorie;
+
     @ManyToOne
     private Equipe equipe;
 
     @OneToMany(mappedBy = "pilote")
     private List<Position> positions;
-
-
 }
